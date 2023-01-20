@@ -9,7 +9,7 @@
     "buildServer": "webpack --config webpack.server.js --watch",
     "startServer": "nodemon --watch build --exec \"node build/bundle.js\"",
 
-    "buildClient": "webpack --config webpack.client.js"
+    "buildClient": "webpack --config webpack.client.js --watch"
 
 
   },

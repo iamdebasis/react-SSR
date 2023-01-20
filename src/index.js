@@ -16,18 +16,18 @@ app.get("/", (req, res) => {
   //this top is the actual html of our application.
   //we will generate a tiny HTML document with a script tag.
 
-  //when we setup the public directory by using app.use we do not have to appent ./  or public. anything. we can directly
+  //when we setup the public directory by using app.use we do not have to appent ./  or public. anything(in line 25 in script tag). we can directly
   //give the file name, bundle.j in script tag. it will autometically get it from public directory.
   const html = `<html>
-                  <head>
+                  <head>Heading</head>
                     <body>
-                      <div>${content}</div>
+                      <div id = "root">${content}</div>
                       <script src = "bundle.js"></script>
                     </body>
-                  </head>
                 </html`;
-  //NOe what will happen is first browser will receive this html snippet then load them in the browser, then it will see
-  //a script tag so it will download the client bundle.js file.
+  //NOe what will happen is first browser will receive this html snippet then load them in the browser, then it will send a request to download the bundle from script tag
+  //so it will download the client bundle.js(clientApp bundle ) file then this js make rerender the whole react app where the content is rendered (in the div with id root), and
+  //makes all the JS sode available all the events and functionality will start working afterwords.
 
   res.send(html);
 });
