@@ -4,7 +4,7 @@ export const Home = ({}) => {
   return (
     <div>
       <h1>This is HOMEE </h1>
-      <p>Welcome HOME 111 LA</p>
+      <p>Welcome HOME 111 LA Beach</p>
       <button
         onClick={() => {
           console.log("i am clickeddddddd");
@@ -12,6 +12,6 @@ export const Home = ({}) => {
       >
         Press Me
       </button>
-    </div> 
+    </div>
   );
 };

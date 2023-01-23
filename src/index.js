@@ -2,7 +2,7 @@ import express from "express";
 // import fs from "fs";
 import path from "path";
 import React from "react";
-import { renderToString } from "react-dom/server";
+import { renderToString } from "react-dom/server"; 
 import { Home } from "../src/client/components/Home";
 
 const PORT = 8080;
@@ -34,3 +34,8 @@ app.get("/", (req, res) => {
 
 // app.get("/", (req, res) => res.send("Hello World!"));
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
+
+
+
+
+
