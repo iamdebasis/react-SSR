@@ -1,6 +1,7 @@
 const path = require("path");
-
-module.exports = {
+const { merge } = require("webpack-merge");
+const baseConfig = require("./webpack.base.js");
+clientConfig = {
   mode: "development",
   entry: {
     //this will be the entry point of out client side codebasie
@@ -11,18 +12,5 @@ module.exports = {
     filename: "bundle.js",
     clean: true,
   },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-          },
-        },
-      },
-    ],
-  },
 };
+module.exports = merge(baseConfig, clientConfig);

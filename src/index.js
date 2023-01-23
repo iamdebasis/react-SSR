@@ -21,10 +21,10 @@ app.get("/", (req, res) => {
   const html = `<html>
                   <head>Heading</head>
                     <body>
-                      <div id = "root">${content}</div>
+                      <div id = "root">${content}</div> 
                       <script src = "bundle.js"></script>
                     </body>
-                </html`;
+                </html>`;
   //NOe what will happen is first browser will receive this html snippet then load them in the browser, then it will send a request to download the bundle from script tag
   //so it will download the client bundle.js(clientApp bundle ) file then this js make rerender the whole react app where the content is rendered (in the div with id root), and
   //makes all the JS sode available all the events and functionality will start working afterwords.
