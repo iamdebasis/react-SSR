@@ -10,7 +10,7 @@ clientConfig = {
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "bundle.js",
-    clean: true,
+    clean: true, 
   },
 };
 module.exports = merge(baseConfig, clientConfig);
